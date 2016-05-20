@@ -8,7 +8,7 @@ Change the following:
  * server/config/appConfig.js
  */
 
-DB_TYPE: process.env.DB_TYPE || DB_TYPES.NONE
+defaultExport.DB_TYPE = process.env.DB_TYPE || DB_TYPES.NONE;
 ```
 
 **How do I switch to a different database?**
@@ -28,7 +28,7 @@ Please read [this PR](https://github.com/choonkending/react-webpack-node/pull/19
  * server/config/appConfig.js
  */
 
-DB_TYPE: process.env.DB_TYPE || DB_TYPES.YOUR_DB
+defaultExport.DB_TYPE = process.env.DB_TYPE || DB_TYPES.YOUR_DB;
 ```
 
 You will need to add a folder after `/db` with [may] contain the following ORM specific code:
